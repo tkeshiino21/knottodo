@@ -18,46 +18,26 @@ const NotificationsScreen = () => {
   );
 };
 
-const TabADetailsScreen = () => {
+const Details = () => {
   const navigation = useNavigation();
-
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Welcome to TabA page!</Text>
+      <Text>TabA Details here!</Text>
       <Button
-        onPress={() => navigation.navigate("TabA Details")}
-        title="Go to TabA Details"
+        onPress={() => navigation.navigate("Notifications")}
+        title="Go back home"
       />
     </View>
   );
 };
 
-function Details() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>TabA Details here!</Text>
-    </View>
-  );
-}
-
-function TabBScreen() {
-  return (
-    <View>
-      <Text style={{ textAlign: "center", marginTop: 300 }}>
-        Welcome to TabB page!
-      </Text>
-    </View>
-  );
-}
-
 const Drawer = createDrawerNavigator();
-export default function App() {
+
+export const DrawerNavigator = () => {
   return (
-    <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
-        {/* <Drawer.Screen name="Home" component={HomeScreen} /> */}
-        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
-      </Drawer.Navigator>
-    </NavigationContainer>
+    <Drawer.Navigator initialRouteName="Details">
+      <Drawer.Screen name="Details" component={Details} />
+      <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+    </Drawer.Navigator>
   );
-}
+};

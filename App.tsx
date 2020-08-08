@@ -23,7 +23,7 @@ const App = () => {
       <SafeAreaProvider>
         <ApolloProvider client={client}>
           <CustomThemeProvider>
-            <Navigation colorScheme={colorScheme} />
+            <Navigation />
           </CustomThemeProvider>
         </ApolloProvider>
         <StatusBar />

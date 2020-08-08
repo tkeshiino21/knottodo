@@ -1,24 +1,39 @@
-import * as Linking from 'expo-linking';
+import * as Linking from "expo-linking";
+import { NotTodayScreen } from "../screens/NotTodayScreen";
 
 export default {
-  prefixes: [Linking.makeUrl('/')],
+  prefixes: [Linking.makeUrl("/")],
   config: {
     screens: {
+      HOME: {
+        screens: {
+          Home: {
+            secreens: {
+              Home: "home"
+            }
+          }
+        }
+      },
       Root: {
         screens: {
           TabOne: {
             screens: {
-              TabOneScreen: 'one',
-            },
+              TabOneScreen: "not-today"
+            }
           },
           TabTwo: {
             screens: {
-              TabTwoScreen: 'two',
-            },
+              TabTwoScreen: "two"
+            }
           },
-        },
+          TabThree: {
+            screens: {
+              TabTwoScreen: "two"
+            }
+          }
+        }
       },
-      NotFound: '*',
-    },
-  },
+      NotFound: "*"
+    }
+  }
 };

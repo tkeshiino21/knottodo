@@ -3,12 +3,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
 import { ColorSchemeName } from "react-native";
 
-import { NotFoundScreen } from "../screens/NotFoundScreen";
-import { RootStackParamList } from "./types";
-import { HomeScreen } from "../screens/HomeScreen";
-import { TabNavigator } from "./2TabNavigator";
-import LinkingConfiguration from "./LinkingConfiguration";
-import { DrawerNavigator } from "./3DrawerNavigator";
+import { TodayScreen } from "../../screens/TodayScreen";
+import { TodoDetailScreen } from "../../screens/TodayScreen";
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started

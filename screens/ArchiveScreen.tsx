@@ -8,17 +8,17 @@ import {
   Text,
   Card,
   ListItem,
-  Icon,
+  Icon
 } from "react-native-elements";
 import { CheckBox } from "react-native-elements";
 import { FontAwesome } from "@expo/vector-icons";
 
-export const TabThreeScreen = () => {
+export const ArchiveScreen = () => {
   const users = [
     {
       name: "girl",
-      avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-    },
+      avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg"
+    }
   ];
   const [checked, setChecked] = useState(true);
   return (
@@ -61,19 +61,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "center"
   },
   title: {
     fontSize: 20,
-    fontWeight: "bold",
+    fontWeight: "bold"
   },
   image: {
     width: 40,
-    height: 60,
+    height: 60
   },
   separator: {
     marginVertical: 30,
     height: 1,
-    width: "80%",
-  },
+    width: "80%"
+  }
 });

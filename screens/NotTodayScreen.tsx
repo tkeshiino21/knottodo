@@ -7,7 +7,7 @@ import { ActivityIndicator } from "react-native";
 import { Image } from "react-native-elements";
 import { Input } from "react-native-elements";
 
-export const TabTwoScreen = () => {
+export const NotTodayScreen = () => {
   const [isError, setIsError] = useState(false);
   const [input, setInput] = useState({
     value: ""
