@@ -1,11 +1,8 @@
 import React from "react";
 import { Button, View, Text } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
-import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { TabNavigator } from "../2TabNavigator";
 
 const NotificationsScreen = () => {
   const navigation = useNavigation();
@@ -35,7 +32,8 @@ const Drawer = createDrawerNavigator();
 
 export const DrawerNavigator = () => {
   return (
-    <Drawer.Navigator initialRouteName="Details">
+    <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Screen name="Home" component={TabNavigator} />
       <Drawer.Screen name="Details" component={Details} />
       <Drawer.Screen name="Notifications" component={NotificationsScreen} />
     </Drawer.Navigator>
