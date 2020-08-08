@@ -1,8 +1,8 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
-import { TabOneScreen } from "../screens/TabOneScreen";
-import { TabOneParamList } from "../types";
-import { CustomHeader } from "./Header";
+import { TabOneScreen } from "../../screens/TodayScreen";
+import { TabOneParamList } from "../../types";
+import { CustomHeader } from "../Header";
 
 export const TabOneNavigator = () => {
   return (
@@ -12,7 +12,7 @@ export const TabOneNavigator = () => {
         component={TabOneScreen}
         options={{
           header: () => CustomHeader({ title: "hello" }),
-          headerTitle: "Today",
+          headerTitle: "Today"
         }}
       />
     </TabOneStack.Navigator>

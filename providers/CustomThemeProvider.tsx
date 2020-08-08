@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { ThemeProvider, Button } from "react-native-elements";
+import { ThemeProvider } from "react-native-elements";
 
 const theme = {
   colors: {
@@ -16,10 +16,10 @@ const theme = {
     searchBg: "rgba(59, 59, 59, 0.8)",
     success: "#28a745",
     error: "#dc3545",
-    warning: "#ffc107",
-  },
+    warning: "#ffc107"
+  }
 };
 
-export const ThemeContainer: FC = ({ children }) => {
+export const CustomThemeProvider: FC = ({ children }) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };

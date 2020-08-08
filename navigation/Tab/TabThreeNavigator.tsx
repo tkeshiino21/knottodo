@@ -1,7 +1,7 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
-import { TabThreeScreen } from "../screens/TabThreeScreen";
-import { TabThreeParamList } from "../types";
+import { TabThreeScreen } from "../../screens/ArchiveScreen";
+import { TabThreeParamList } from "../../types";
 
 export const TabThreeNavigator = () => {
   return (
