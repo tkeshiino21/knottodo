@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/core";
-import { Container, Title } from "../components/atoms";
+import { Container, Title } from "../ui";
 import { Button } from "react-native-elements";
 
 export const NotFoundScreen = () => {

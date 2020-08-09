@@ -1,11 +1,8 @@
 import React, { useState, useReducer } from "react";
 import { StyleSheet, TextInput, NativeSyntheticEvent } from "react-native";
-
-import EditScreenInfo from "../components/EditScreenInfo";
-import { Text, View } from "../components/Themed";
 import { ActivityIndicator } from "react-native";
-import { Image } from "react-native-elements";
-import { Input } from "react-native-elements";
+import { Image, Input, Text, Divider } from "react-native-elements";
+import { Container } from "../ui/Container";
 
 export const NotTodayScreen = () => {
   const [isError, setIsError] = useState(false);
@@ -27,9 +24,9 @@ export const NotTodayScreen = () => {
   // const error = input.touched && input.value === "";
 
   return (
-    <View>
+    <Container>
       <Text>Hello my wonder land</Text>
-      <View lightColor="blue" darkColor="rgba(255,255,255,0.1)" />
+      <Divider style={{ backgroundColor: "blue" }} />
       <Image
         source={{
           uri: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg"
@@ -47,6 +44,6 @@ export const NotTodayScreen = () => {
         InputComponent={TextInput}
       />
       {isError && <Text>error</Text>}
-    </View>
+    </Container>
   );
 };

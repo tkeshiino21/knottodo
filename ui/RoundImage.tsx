@@ -1,10 +1,10 @@
 import styled from "styled-components/native";
 
 export const RoundImage = styled.Image`
-  width: 200;
-  height: 200;
-  border-radius: 100;
+  width: 40;
+  height: 40;
+  border-radius: 20;
   overflow: hidden;
-  border-width: 3;
-  border-color: red;
+  border-width: 1;
+  border-color: orange;
 `;
