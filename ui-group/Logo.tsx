@@ -6,10 +6,10 @@ import { Box } from "../ui/Box";
 
 const Logo = () => {
   return (
-    <Box flex>
+    <Box style={{ display: "inline-flex", alignItems: "center" }}>
       <RoundImage source={require("../assets/images/shakespeare.png")} />
       <Box ml={8} />
-      <Text h3 style={{ color: "white" }}>
+      <Text h4 style={{ color: "white", letterSpacing: 3 }}>
         KnotTodo
       </Text>
     </Box>

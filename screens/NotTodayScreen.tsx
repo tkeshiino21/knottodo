@@ -10,19 +10,6 @@ export const NotTodayScreen = () => {
     value: ""
   });
 
-  const CustomTextInput = () => {
-    return (
-      <TextInput
-        onBlur={() => {
-          console.log(isError);
-          const isEmpty = input.value === "" ? true : false;
-          setIsError(isEmpty);
-        }}
-      />
-    );
-  };
-  // const error = input.touched && input.value === "";
-
   return (
     <Container>
       <Text>Hello my wonder land</Text>
@@ -37,7 +24,7 @@ export const NotTodayScreen = () => {
       <Input placeholder="BASIC INPUT" />
 
       <Input
-        placeholder="INPUT WITH ERROR MESSAGE" // errorStyle={{ color: "red" }}
+        placeholder="INPUT WITH ERROR MESSAGE"
         value={input.value}
         onChangeText={value => setInput({ value })}
         onBlur={() => setIsError(input.value === "")}

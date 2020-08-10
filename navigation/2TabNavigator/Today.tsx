@@ -4,15 +4,23 @@ import { TodayScreen } from "../../screens/TodayScreen";
 import { TabOneParamList } from "../types";
 import { CustomHeader } from "../CustomHeader";
 import { StackNavigator } from "../1StackNavigator/index";
+import { TodoDetailScreen } from "../../screens/TodoDetailScreen";
 
-const TabOneStack = createStackNavigator<TabOneParamList>();
+const TabOneStack = createStackNavigator();
 
 export const Today = () => {
   return (
     <TabOneStack.Navigator>
       <TabOneStack.Screen
         name="Today"
-        component={StackNavigator}
+        component={Today}
+        options={{
+          header: () => <CustomHeader title="KnotTodo" />
+        }}
+      />
+      <TabOneStack.Screen
+        name="TodoDetail"
+        component={TodoDetailScreen}
         options={{
           header: () => <CustomHeader title="KnotTodo" />
         }}

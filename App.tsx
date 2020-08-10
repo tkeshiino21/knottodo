@@ -4,8 +4,9 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import { useCachedResources } from "./hooks/useCachedResources";
 import { useColorScheme } from "./hooks/useColorScheme";
 import { Navigation } from "./navigation";
-import { CustomThemeProvider } from "./providers/CustomThemeProvider";
+import { CustomThemeProvider, theme } from "./providers/CustomThemeProvider";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { ThemeProvider } from "styled-components/native";
 
 const client = new ApolloClient({
   uri: "https://right-goldfish-91.hasura.app/v1/graphql",
@@ -23,7 +24,9 @@ const App = () => {
       <SafeAreaProvider>
         <ApolloProvider client={client}>
           <CustomThemeProvider>
-            <Navigation />
+            <ThemeProvider theme={theme}>
+              <Navigation />
+            </ThemeProvider>
           </CustomThemeProvider>
         </ApolloProvider>
         <StatusBar />

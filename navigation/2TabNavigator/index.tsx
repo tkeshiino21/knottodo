@@ -14,41 +14,42 @@ export const TabNavigator = () => {
   const { theme } = useContext(ThemeContext);
   const colors = theme.colors as Colors;
 
-  const TabBarIcon = (props: { name: string }) => {
-    return (
-      <Ionicons
-        size={30}
-        color={colors.primary}
-        style={{ marginBottom: -3 }}
-        {...props}
-      />
-    );
-  };
-
   return (
     <BottomTab.Navigator
       initialRouteName="Today"
-      tabBarOptions={{ activeTintColor: colors.primary }}
+      tabBarOptions={{
+        activeTintColor: colors.primary,
+        inactiveTintColor: colors.grey5
+      }}
     >
       <BottomTab.Screen
         name="Today"
         component={Today}
         options={{
-          tabBarIcon: () => <TabBarIcon name="ios-home" />
+          tabBarLabel: "Today",
+          tabBarIcon: ({ color, size }: { color: string; size: number }) => (
+            <Ionicons name="ios-today" color={color} size={size} />
+          )
         }}
       />
       <BottomTab.Screen
         name="NotToday"
         component={NotToday}
         options={{
-          tabBarIcon: () => <TabBarIcon name="ios-calendar" />
+          tabBarLabel: "NotToday",
+          tabBarIcon: ({ color, size }: { color: string; size: number }) => (
+            <Ionicons name="ios-calendar" color={color} size={size} />
+          )
         }}
       />
       <BottomTab.Screen
         name="Archive"
         component={Archive}
         options={{
-          tabBarIcon: () => <TabBarIcon name="ios-archive" />
+          tabBarLabel: "Archive",
+          tabBarIcon: ({ color, size }: { color: string; size: number }) => (
+            <Ionicons name="ios-archive" color={color} size={size} />
+          )
         }}
       />
     </BottomTab.Navigator>

@@ -1,10 +1,11 @@
 import { ReactNode } from "react";
 import styled from "styled-components/native";
-import { ViewProps } from "react-native";
+import { ViewProps, StyleProp } from "react-native";
 import { MP } from "./types";
 import { getSpacing } from "./utils";
 
 type Box = Partial<{
+  style: any;
   align: string;
   primary: boolean;
   flex: boolean;
