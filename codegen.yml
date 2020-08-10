@@ -1,0 +1,9 @@
+overwrite: true
+schema: "https://right-goldfish-91.hasura.app/v1/graphql"
+documents: "graphql/**/*.ts"
+generates:
+  generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"

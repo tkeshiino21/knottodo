@@ -1,12 +1,5 @@
 import React, { FC } from "react";
-import {
-  Platform,
-  Animated,
-  TouchableOpacity,
-  TouchableNativeFeedback,
-  View,
-  StyleSheet
-} from "react-native";
+import { Animated, TouchableOpacity, StyleSheet } from "react-native";
 
 const Fab: FC = ({ children }) => {
   const FabButton: FC = ({ children }) => {

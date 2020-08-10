@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
 export const GET_TODOS = gql`
-  query getTodos($isToday: boolean) {
+  query getTodos($isToday: Boolean) {
     todo(where: { isToday: { _eq: $isToday } }) {
       id
       isToday
@@ -11,7 +11,7 @@ export const GET_TODOS = gql`
 `;
 
 export const GET_ALL_TODOS = gql`
-  query getTodos {
+  query getAllTodos {
     todo {
       id
       isToday
