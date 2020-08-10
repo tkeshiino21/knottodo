@@ -1,9 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
-import * as React from "react";
-import { TodayScreen } from "../../screens/TodayScreen";
-import { TabOneParamList } from "../types";
+import React from "react";
 import { CustomHeader } from "../CustomHeader";
-import { StackNavigator } from "../1StackNavigator/index";
 import { TodoDetailScreen } from "../../screens/TodoDetailScreen";
 
 const TabOneStack = createStackNavigator();

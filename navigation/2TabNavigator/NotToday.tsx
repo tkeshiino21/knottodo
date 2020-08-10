@@ -1,7 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
-import * as React from "react";
+import React from "react";
 import { NotTodayScreen } from "../../screens/NotTodayScreen";
-import { TabTwoParamList } from "../types";
 import { CustomHeader } from "../CustomHeader";
 import { TodoDetailScreen } from "../../screens/TodoDetailScreen";
 
